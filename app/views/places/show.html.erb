@@ -1,1 +1,11 @@
-show.html.erb
+<h1><%= @place.name %></h1>
+
+
+<div>
+	<img width="300" height="200" src = "<%= @place.picture_url %>" />
+</div>
+
+
+<p><%= @place.review %></p>
+
+<p><%= link_to 'home', root_path %></p>
