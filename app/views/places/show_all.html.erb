@@ -11,8 +11,12 @@
 		<% @places.each do |place| %>
 			<tr>
 				<td><%= place.name %></td>
-				<td><%= place.picture_url %></td>
-				<td><%= place.review %></td>
+				<td><img id='tejas' src = '<%= place.picture_url %>' /></td>
+				<td class="review" ><%= place.snippet %></td>
+
+				<td><%= link_to 'Show', place %></td>
+				<td><%= link_to 'Edit', edit_path(place) %></td>
+				<td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 			<% end %>
 	</tbody>
